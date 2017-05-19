@@ -17,7 +17,7 @@ public class Servidor
         
 		HttpServer server=iniciarServidor();
 		
-		System.out.println("Servidor rodando");
+		System.out.println("Servidor - Projeto carlosgma.bcbsgs.webapi -   rodando");
 
 		System.in.read();
 		
@@ -28,7 +28,7 @@ public class Servidor
 	
 	public static HttpServer iniciarServidor() throws IOException
 	{
-	    ResourceConfig config = new ResourceConfig().packages("br.gma.bancensgs.resource");
+	    ResourceConfig config = new ResourceConfig().packages("br.carlosgma.bcbsgs.webapi.resource");
 	    
 	    URI uri = URI.create("http://localhost:8083/api");
        
