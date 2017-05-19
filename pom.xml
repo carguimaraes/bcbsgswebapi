@@ -32,6 +32,31 @@
  </build>
   
   <dependencies>
+  
+   <!-- https://mvnrepository.com/artifact/wsdl4j/wsdl4j -->
+   <dependency>
+    <groupId>wsdl4j</groupId>
+    <artifactId>wsdl4j</artifactId>
+    <version>1.6.3</version>
+  </dependency>
+ 
+  
+  <!-- https://mvnrepository.com/artifact/commons-discovery/commons-discovery -->
+<dependency>
+    <groupId>commons-discovery</groupId>
+    <artifactId>commons-discovery</artifactId>
+    <version>0.5</version>
+</dependency>
+  
+  
+  <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+	<dependency>
+	    <groupId>commons-logging</groupId>
+	    <artifactId>commons-logging</artifactId>
+	    <version>1.1.1</version>
+	</dependency>
+  
+  
    <!-- https://mvnrepository.com/artifact/org.apache.axis/axis -->
 	<dependency>
 	    <groupId>org.apache.axis</groupId>
@@ -76,19 +101,8 @@
 	    <artifactId>jersey-media-moxy</artifactId>
 	    <version>2.25</version>
 	</dependency>
-	 
-   <!--
-    
-    https://mvnrepository.com/artifact/org.glassfish.jersey.containers/jersey-container-servlet-core 
-   <dependency>
-     <groupId>org.glassfish.jersey.containers</groupId>
-     <artifactId>jersey-container-servlet-core</artifactId>
-     <version>2.25</version>
-    </dependency>
-    -->
- 	 	   
-       
-	  
+		   
+         
 	  <dependency>
 	      <groupId>junit</groupId>
 	      <artifactId>junit</artifactId>
