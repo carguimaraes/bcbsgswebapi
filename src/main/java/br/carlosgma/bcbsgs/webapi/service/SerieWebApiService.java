@@ -5,7 +5,7 @@ import br.gov.bcb.pec.sgs.casosdeuso.ws.comum.WSSerieVO;
 import br.gov.bcb.pec.sgs.casosdeuso.ws.comum.WSValorSerieVO;
 import br.gov.bcb.www3.wssgs.services.FachadaWSSGS.FachadaWSSGSProxy;
 
-public class SerieSOAService 
+public class SerieWebApiService 
 {
 	
 	public WSSerieVO ObeterSerie_()
@@ -29,7 +29,7 @@ public class SerieSOAService
 		 return serieVO;
 	}
 
-	public WSSerieVO ObeterSerie()
+	public ApiServiceRetorno ObeterSerie(int codSerie)
 	{
 	     WSSerieVO serieVO=null;	
 		 FachadaWSSGSProxy serviceProxy;
@@ -41,7 +41,7 @@ public class SerieSOAService
 		 try 
 		 {
 			
-			serieVO=serviceProxy.getUltimoValorVO(195);
+			serieVO=serviceProxy.getUltimoValorVO(codSerie);
 			
 			
 		 }
@@ -56,6 +56,6 @@ public class SerieSOAService
 		 
 		  
 		  
-	     return serieVO;
+	     return ApiServiceRetorno.Sucesso(serieVO);
 	}
 }

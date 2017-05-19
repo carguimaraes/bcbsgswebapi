@@ -8,7 +8,8 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import br.carlosgma.bcbsgs.webapi.dto.SerieDto;
-import br.carlosgma.bcbsgs.webapi.service.SerieSOAService;
+import br.carlosgma.bcbsgs.webapi.service.ApiServiceRetorno;
+import br.carlosgma.bcbsgs.webapi.service.SerieWebApiService;
 import br.gov.bcb.pec.sgs.casosdeuso.ws.comum.WSSerieVO;
 
 @Path("v1/series")
@@ -21,11 +22,20 @@ public class SerieResource {
 	public Response getUltimoValor(@PathParam("codigo") int codigo)
 	{
 		//TODO tratar not encontrar
-		SerieSOAService serieSOAService= new SerieSOAService();  
+		SerieWebApiService serieWebApiService= new SerieWebApiService();  
 		
-		WSSerieVO serieVO =serieSOAService.ObeterSerie();
+		// ApiServiceRetorno s=  _areaAtuacaoWebApiService.getListaAreaAtuacao();
 		
-	  	return   Response.ok(serieVO , MediaType.APPLICATION_JSON).build();	  
+		ApiServiceRetorno retorno =serieWebApiService.ObeterSerie(codigo);
+		
+		
+        return Response.status(retorno.ObterHttpStatusCode())
+        		.entity(retorno.ObterRetorno())
+        		.type(MediaType.APPLICATION_JSON)
+        		.build();
+
+	
+	  
 	}
 
 }
