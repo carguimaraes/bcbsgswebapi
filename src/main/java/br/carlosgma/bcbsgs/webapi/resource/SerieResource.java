@@ -4,6 +4,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -28,10 +29,13 @@ public class SerieResource {
 		
 		ApiServiceRetorno retorno =serieWebApiService.ObeterSerie(codigo);
 		
-		
-        return Response.status(retorno.ObterHttpStatusCode())
+		 
+        return Response.status(retorno.ObterHttpStatus())
         		.entity(retorno.ObterRetorno())
-        		.type(MediaType.APPLICATION_JSON)
+        		 
+        		.encoding("charset=UTF-8")
+                .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_TYPE.withCharset("utf-8"))
+
         		.build();
 
 	

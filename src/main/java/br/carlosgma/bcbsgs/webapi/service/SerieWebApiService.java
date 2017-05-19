@@ -48,13 +48,20 @@ public class SerieWebApiService
 		 catch (RemoteException e) 
 		 {
 			 
-			 System.out.println("ERRO ACESSO SERVICO");		 
-			 System.out.println("==>"+e.getMessage());
-			  
-			
+			 
+		    //"br.gov.bcb.pec.sgs.comum.excecoes.SGSNegocioException: No series found"
+             
+			 if(e.getMessage().contains("No series found"))
+			 {
+				 return ApiServiceRetorno.FalhaRetornoVazioOuNaoEncontrado((new String[]{"Serie não encontrada"}));
+			 }
+			 
+
+			 return ApiServiceRetorno.FalhaServidor(new String[]{e.getMessage()});
+			 
 		}
 		 
-		  
+	//	 return ApiServiceRetorno.FalhaRetornoVazioOuNaoEncontrado(new String[] {"ola teste","Erro valor"}); 
 		  
 	     return ApiServiceRetorno.Sucesso(serieVO);
 	}
