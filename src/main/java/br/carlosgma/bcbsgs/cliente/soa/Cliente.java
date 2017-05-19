@@ -1,4 +1,4 @@
-package br.carlosgma.bcbsgs.webapi;
+package br.carlosgma.bcbsgs.cliente.soa;
 
 import java.rmi.RemoteException;
 
@@ -6,7 +6,7 @@ import br.gov.bcb.pec.sgs.casosdeuso.ws.comum.WSSerieVO;
 import br.gov.bcb.www3.wssgs.services.FachadaWSSGS.FachadaWSSGSProxy;
 
 
-public class TesteSOA {
+public class Cliente {
 
 	public static void main(String[] args)
 	{

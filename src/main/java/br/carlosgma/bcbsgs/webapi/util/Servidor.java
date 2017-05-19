@@ -11,6 +11,8 @@ import org.glassfish.jersey.server.ResourceConfig;
 
 public class Servidor 
 {
+	public static final String   URL_SERVICO_REST="http://localhost:8083";
+	
 	public static void main(String[] args) throws IOException 
 	{
 		System.out.println("GMA Inicio");
@@ -30,7 +32,7 @@ public class Servidor
 	{
 	    ResourceConfig config = new ResourceConfig().packages("br.carlosgma.bcbsgs.webapi.resource");
 	    
-	    URI uri = URI.create("http://localhost:8083/api");
+	    URI uri = URI.create(URL_SERVICO_REST+"/api");
        
 	    HttpServer server = GrizzlyHttpServerFactory.createHttpServer(uri, config);
 	    server.start();
