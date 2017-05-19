@@ -7,6 +7,10 @@
 
 package br.gov.bcb.pec.sgs.casosdeuso.ws.comum;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class WSSerieVO  implements java.io.Serializable {
     private int anoFim;
 
@@ -56,8 +60,7 @@ public class WSSerieVO  implements java.io.Serializable {
 
     private br.gov.bcb.pec.sgs.casosdeuso.ws.comum.WSValorSerieVO[] valores;
 
-    public WSSerieVO() {
-    }
+    public WSSerieVO() {  }
 
     public WSSerieVO(
            int anoFim,
@@ -116,6 +119,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return anoFim
      */
+    @XmlAttribute
     public int getAnoFim() {
         return anoFim;
     }
@@ -136,6 +140,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return anoInicio
      */
+    @XmlAttribute
     public int getAnoInicio() {
         return anoInicio;
     }
@@ -156,6 +161,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return aviso
      */
+    @XmlAttribute
     public java.lang.String getAviso() {
         return aviso;
     }
@@ -176,6 +182,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return diaFim
      */
+    @XmlAttribute
     public int getDiaFim() {
         return diaFim;
     }
@@ -196,6 +203,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return diaInicio
      */
+    @XmlAttribute
     public int getDiaInicio() {
         return diaInicio;
     }
@@ -216,6 +224,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return especial
      */
+    @XmlAttribute
     public boolean isEspecial() {
         return especial;
     }
@@ -236,6 +245,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return fonte
      */
+    @XmlAttribute
     public java.lang.String getFonte() {
         return fonte;
     }
@@ -256,6 +266,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return fullName
      */
+    @XmlAttribute
     public java.lang.String getFullName() {
         return fullName;
     }
@@ -276,6 +287,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return gestorProprietario
      */
+    @XmlAttribute
     public java.lang.String getGestorProprietario() {
         return gestorProprietario;
     }
@@ -296,6 +308,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return mesFim
      */
+    @XmlAttribute
     public int getMesFim() {
         return mesFim;
     }
@@ -316,6 +329,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return mesInicio
      */
+    @XmlAttribute
     public int getMesInicio() {
         return mesInicio;
     }
@@ -336,6 +350,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return nomeAbreviado
      */
+    @XmlAttribute
     public java.lang.String getNomeAbreviado() {
         return nomeAbreviado;
     }
@@ -356,6 +371,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return nomeCompleto
      */
+    @XmlAttribute
     public java.lang.String getNomeCompleto() {
         return nomeCompleto;
     }
@@ -376,6 +392,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return oid
      */
+    @XmlAttribute
     public long getOid() {
         return oid;
     }
@@ -396,6 +413,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return periodicidade
      */
+    @XmlAttribute
     public java.lang.String getPeriodicidade() {
         return periodicidade;
     }
@@ -416,6 +434,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return periodicidadeSigla
      */
+    @XmlAttribute
     public java.lang.String getPeriodicidadeSigla() {
         return periodicidadeSigla;
     }
@@ -436,6 +455,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return possuiBloqueios
      */
+    @XmlAttribute
     public boolean isPossuiBloqueios() {
         return possuiBloqueios;
     }
@@ -456,6 +476,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return publica
      */
+    @XmlAttribute
     public boolean isPublica() {
         return publica;
     }
@@ -476,6 +497,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return shortName
      */
+    @XmlAttribute
     public java.lang.String getShortName() {
         return shortName;
     }
@@ -496,6 +518,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return ultimoValor
      */
+  //  @XmlAttribute
     public br.gov.bcb.pec.sgs.casosdeuso.ws.comum.WSValorSerieVO getUltimoValor() {
         return ultimoValor;
     }
@@ -516,6 +539,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return unidadePadrao
      */
+    @XmlAttribute
     public java.lang.String getUnidadePadrao() {
         return unidadePadrao;
     }
@@ -536,6 +560,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return unidadePadraoIngles
      */
+    @XmlAttribute
     public java.lang.String getUnidadePadraoIngles() {
         return unidadePadraoIngles;
     }
@@ -556,6 +581,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return valorDiaNaoUtil
      */
+    @XmlAttribute
     public boolean isValorDiaNaoUtil() {
         return valorDiaNaoUtil;
     }
@@ -576,6 +602,7 @@ public class WSSerieVO  implements java.io.Serializable {
      * 
      * @return valores
      */
+ //   @XmlAttribute
     public br.gov.bcb.pec.sgs.casosdeuso.ws.comum.WSValorSerieVO[] getValores() {
         return valores;
     }

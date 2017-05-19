@@ -7,6 +7,10 @@
 
 package br.gov.bcb.pec.sgs.casosdeuso.ws.comum;
 
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class WSValorSerieVO  implements java.io.Serializable {
     private int ano;
 
@@ -32,8 +36,7 @@ public class WSValorSerieVO  implements java.io.Serializable {
 
     private java.math.BigDecimal valor;
 
-    public WSValorSerieVO() {
-    }
+    public WSValorSerieVO() {  }
 
     public WSValorSerieVO(
            int ano,
@@ -68,6 +71,7 @@ public class WSValorSerieVO  implements java.io.Serializable {
      * 
      * @return ano
      */
+    @XmlAttribute
     public int getAno() {
         return ano;
     }
@@ -88,6 +92,7 @@ public class WSValorSerieVO  implements java.io.Serializable {
      * 
      * @return anoFim
      */
+    @XmlAttribute
     public int getAnoFim() {
         return anoFim;
     }
@@ -108,6 +113,7 @@ public class WSValorSerieVO  implements java.io.Serializable {
      * 
      * @return bloqueado
      */
+    @XmlAttribute
     public boolean isBloqueado() {
         return bloqueado;
     }
@@ -128,6 +134,7 @@ public class WSValorSerieVO  implements java.io.Serializable {
      * 
      * @return bloqueioLiberado
      */
+    @XmlAttribute
     public boolean isBloqueioLiberado() {
         return bloqueioLiberado;
     }
@@ -148,6 +155,7 @@ public class WSValorSerieVO  implements java.io.Serializable {
      * 
      * @return dia
      */
+    @XmlAttribute
     public int getDia() {
         return dia;
     }
@@ -168,6 +176,7 @@ public class WSValorSerieVO  implements java.io.Serializable {
      * 
      * @return diaFim
      */
+    @XmlAttribute
     public int getDiaFim() {
         return diaFim;
     }
@@ -188,6 +197,7 @@ public class WSValorSerieVO  implements java.io.Serializable {
      * 
      * @return mes
      */
+    @XmlAttribute
     public int getMes() {
         return mes;
     }
@@ -208,6 +218,7 @@ public class WSValorSerieVO  implements java.io.Serializable {
      * 
      * @return mesFim
      */
+    @XmlAttribute
     public int getMesFim() {
         return mesFim;
     }
@@ -228,6 +239,7 @@ public class WSValorSerieVO  implements java.io.Serializable {
      * 
      * @return oid
      */
+    @XmlAttribute
     public long getOid() {
         return oid;
     }
@@ -248,6 +260,7 @@ public class WSValorSerieVO  implements java.io.Serializable {
      * 
      * @return oidSerie
      */
+    @XmlAttribute
     public long getOidSerie() {
         return oidSerie;
     }
@@ -268,6 +281,7 @@ public class WSValorSerieVO  implements java.io.Serializable {
      * 
      * @return svalor
      */
+    @XmlAttribute
     public java.lang.String getSvalor() {
         return svalor;
     }
@@ -288,6 +302,7 @@ public class WSValorSerieVO  implements java.io.Serializable {
      * 
      * @return valor
      */
+    @XmlAttribute
     public java.math.BigDecimal getValor() {
         return valor;
     }
