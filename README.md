@@ -13,10 +13,9 @@ https://www3.bcb.gov.br/sgspub/JSP/sgsgeral/sgsAjuda.jsp
 
 https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries
 
-
 ======== Teste no Eclipse com grizzly
 
-br.carlosgma.bcbsgs.cliente.rest.Cliente
+   br.carlosgma.bcbsgs.cliente.rest.Cliente
 
  ======== Teste no Tomcat - Ececutar Maven (package ) e copiar "war"  para tomcat 
  
