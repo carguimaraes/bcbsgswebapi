@@ -1,5 +1,7 @@
 # bcbsgswebapi
 
+
+
 Projeto desenvolvido por Carlos Alberto Luciano Martins GuimarÃ£es
 
 Objetivo:
@@ -11,20 +13,21 @@ https://www3.bcb.gov.br/sgspub/JSP/sgsgeral/sgsAjuda.jsp
 
 https://www3.bcb.gov.br/sgspub/localizarseries/localizarSeries.do?method=prepararTelaLocalizarSeries
 
-Para testar o serviço - no ambiente eclipse : 
 
-... Levantar servidor no Eclipse - Rodar classe: Servidor
+======== Teste no Eclipse com grizzly
+
+br.carlosgma.bcbsgs.cliente.rest.Cliente
+
+ ======== Teste no Tomcat - Ececutar Maven (package ) e copiar "war"  para tomcat 
  
-http://localhost:8083/api/v1/series/{COIDIGO DA SERIE}/ultimovalor
-http://localhost:8083/api/v1/series/22/ultimovalor
+ http://localhost:8088/carlosgmabcbsgswebapi/api/v1/series/22/ultimovalor
+ 
 
-Para testar outro ambiente: 
-1.Gerar War
-2.Publicar o war
 
 
 
 TODO:
+.Stop - retirar chamada do servidor  grizzly
 .Mensagem para rota nao definida
 .Injentar codigo (CDI) - retirar o acoplamento 
 .Montar teste unitario
